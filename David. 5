@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Web Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Student Registration Form</h1>
+    </header>
+
+    <section>
+        <div>
+            <form id="registration_form" action="#" method="post" onsubmit="return validateform()">
+
+                <label for="fname">First Name</label><br>
+                <input type="text" name="fname" id="fname" maxlength="20"><br><br>
+
+
+                <label for="lname">Last Name</label><br>
+                <input type="text" name="lname" id="lname" maxlength="20"><br><br>
+
+                <label for="description">Bio</label><br>
+                <textarea name="description" id="description" cols="35" rows="5">Tell us about yourself</textarea><br><br>
+
+                <label for="marital_status">Marital Status</label><br>
+                <select name="marital_status" id="marital_status">
+                        <option value="single">Single</option>
+                        <option value="married">Married</option>
+                        <option value="divorced">Divorced</option>
+                        <option value="separated">Separated</option>
+                </select><br><br>
+
+                <label for="dob">Date of Birth</label><br>
+                <input type="date" name="dob" id="dob"><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" name="email" id="email"><br><br>
+
+                <label for="password_1">Password</label><br>
+                <input type="password" name="password_1" id="password_1" maxlength="16"><br><br>
+
+                <label for="password_2">Confirm Password:</label><br>
+                <input type="password" name="password_2" id="password_2" maxlength="16"><br><br>
+
+                <label for="image">Upload Photo </label>
+                <input type="file" id="image" name="image" accept="image/*"><br><br>
+
+                <input type="button" id="submit" value="Submit">
+
+
+
+            </form>
+        </div>
+    </section>
+
+</body>
+
+</html>
