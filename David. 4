@@ -1,0 +1,21 @@
+function validateform() {
+    var fname = document.forms["registration_form"].["fname"].value;
+    var lname = document.registration_form.lname.value;
+    password_1 = document.registration_form.password_1.value;
+    password_2 = document.registration_form.password_2.value;
+
+    if (fname == null || fname == "") {
+        alert("Firstname can't be blank");
+        return false;
+    }
+    if (lname == null || lname == "") {
+        alert("Lastname can't be blank");
+        return false;
+    }
+    if (password_1 != password_2) {
+        alert("Passwords do not match");
+        return false;
+    } else if (password_1 || password_2 < 6) {
+        alert("Password must be at least 6 characters long")
+    }
+}
