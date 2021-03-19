@@ -1,37 +1,21 @@
-header {
-    text-align: center;
-    font-family: helvetica, Arial, sans-serif;
-    background: blue;
-    color: white;
-    padding: 10px;
-    margin: 0px;
-}
+function validateform() {
+    var fname = document.forms["registration_form"].["fname"].value;
+    var lname = document.registration_form.lname.value;
+    password_1 = document.registration_form.password_1.value;
+    password_2 = document.registration_form.password_2.value;
 
-section {
-    font-size: 20px;
-    padding: 5px;
-    background: rgb(32, 38, 77);
-    color: white;
-}
-
-input {
-    width: auto;
-    border: 2px solid red;
-    border-radius: 5px;
-    font-size: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-section>div>form>textarea {
-    border: 2px solid red;
-    border-radius: 5px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
-}
-
-section>div>form>select {
-    border: 2px solid red;
-    border-radius: 5px;
-    font-size: 15px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    if (fname == null || fname == "") {
+        alert("Firstname can't be blank");
+        return false;
+    }
+    if (lname == null || lname == "") {
+        alert("Lastname can't be blank");
+        return false;
+    }
+    if (password_1 != password_2) {
+        alert("Passwords do not match");
+        return false;
+    } else if (password_1 || password_2 < 6) {
+        alert("Password must be at least 6 characters long")
+    }
 }
